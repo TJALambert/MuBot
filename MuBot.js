@@ -7,7 +7,7 @@ const request = require('superagent')
 const Discord = require('discord.js')
 const _BOT = new Discord.Client()
 
-const _TOKEN = 'MjcwNzAwMTM3OTcyNDk4NDQy.C1_sug.BgPTvITkd-hjy1OLQknGdWsRnxo'
+const _TOKEN = INSERTTOKENHERE
 const _PREFIX = "+mu"
 const _KEY = 'AIzaSyAklDbWbRrrRlJ2ZY5D4hFpFWb1DwYHB5g'
 
