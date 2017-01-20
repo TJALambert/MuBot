@@ -7,9 +7,9 @@ const request = require('superagent')
 const Discord = require('discord.js')
 const _BOT = new Discord.Client()
 
-const _TOKEN = INSERTYOURTOKEN
+const _TOKEN = 'MjcwNzAwMTM3OTcyNDk4NDQy.C1_sug.BgPTvITkd-hjy1OLQknGdWsRnxo'
 const _PREFIX = "+mu"
-const _KEY = INSERTYOURKEY
+const _KEY = 'AIzaSyAklDbWbRrrRlJ2ZY5D4hFpFWb1DwYHB5g'
 
 const streamOptions = { seek: 0, volume: 1 }
 let curPlaylists = []
@@ -99,8 +99,8 @@ var commands = {
     }
 	},
 	"skip": {
-    usage: "+mu skip <empty>|<amount>|<all>",
-		description: "Skips current song in the playlist",
+    usage: "+mu skip <[number]|all>",
+		description: "Skips a number of songs from the playlist, default value of 1",
 		process: function(msg, suffix) {
 		  let playlist = curPlaylists.find(function (playlist) { return playlist.guildID === msg.guild.id})
 		  if (playlist) {
@@ -120,6 +120,32 @@ var commands = {
 		    }
 		  } else {
 		    let msgOut = "Playlist is empty!"
+		    msg.channel.sendMessage(msgOut)
+		  }
+    }
+	},
+	"pause": {
+    usage: "+mu pause",
+		description: "Pauses playback",
+		process: function(msg, suffix) {
+	    let connection = _BOT.voiceConnections.find(voiceConnection => voiceConnection.channel.guild === msg.channel.guild)
+	    if (connection) {
+	      connection.player.dispatcher.pause()
+	    } else {
+	      let msgOut = "No voice active!"
+	      msg.channel.sendMessage(msgOut)
+	    }
+    }
+	},
+	"resume": {
+    usage: "+mu resume",
+		description: "Resumes playback",
+		process: function(msg, suffix) {
+		  let connection = _BOT.voiceConnections.find(voiceConnection => voiceConnection.channel.guild === msg.channel.guild)
+		  if (connection) {
+		    connection.player.dispatcher.resume()
+		  } else {
+		    let msgOut = "No voice active!"
 		    msg.channel.sendMessage(msgOut)
 		  }
     }
