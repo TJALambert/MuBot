@@ -7,9 +7,9 @@ const request = require('superagent')
 const Discord = require('discord.js')
 const _BOT = new Discord.Client()
 
-const _TOKEN = INSERTTOKENHERE
+const _TOKEN = INSERTYOURTOKEN
 const _PREFIX = "+mu"
-const _KEY = 'AIzaSyAklDbWbRrrRlJ2ZY5D4hFpFWb1DwYHB5g'
+const _KEY = INSERTYOURKEY
 
 const streamOptions = { seek: 0, volume: 1 }
 let curPlaylists = []
