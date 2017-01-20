@@ -7,7 +7,7 @@ const ffmpeg = require('ffmpeg')
 const Discord = require('discord.js')
 const _BOT = new Discord.Client()
 
-const _TOKEN = 'MjcwNzAwMTM3OTcyNDk4NDQy.C1_sug.BgPTvITkd-hjy1OLQknGdWsRnxo'
+const _TOKEN = INSERTTOKENHERE
 const _PREFIX = "+mu"
 
 const streamOptions = { seek: 0, volume: 1 }
