@@ -1,0 +1,19 @@
+{
+  "name": "mubot",
+  "version": "1.0.0",
+  "main": "MuBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tjalambert",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TJALambert/MuBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TJALambert/MuBot/issues"
+  },
+  "homepage": "https://github.com/TJALambert/MuBot"
+}
