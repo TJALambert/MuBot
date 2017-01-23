@@ -1,5 +1,5 @@
 {
-    "botToken" : "MjcwNzAwMTM3OTcyNDk4NDQy.C1_sug.BgPTvITkd-hjy1OLQknGdWsRnxo",
+    "botToken" : INSERTYOURTOKEN,
     "botPrefix" : "+mu",
-    "ytKEY" : "AIzaSyAklDbWbRrrRlJ2ZY5D4hFpFWb1DwYHB5g"
+    "ytKEY" : INSERTYOURAPIKEY
 }
